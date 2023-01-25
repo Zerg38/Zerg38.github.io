@@ -29,3 +29,22 @@ nav{
 main{
 	display:flex;
 }
+article{
+	flex-basis: 75%; 
+}
+
+aside{
+	flex-basis: 25%;
+}
+
+@media (max-width: 600px){
+	main{
+		flex-direction: column;
+	}
+	article{
+		flex-basis:100%;
+	}
+	aside{
+		flex-basis:100%;
+	}
+}
