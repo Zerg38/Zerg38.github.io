@@ -1,50 +1,71 @@
-html{
-font-family: 'Covered By Your Grace', cursive;
-font-family: 'Ubuntu Mono', monospace;
-font-family: 'Yantramanav', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Covered By Your Grace', cursive;
-font-family: 'Ubuntu Condensed', sans-serif;
-font-family: 'Ubuntu Mono', monospace;
-font-family: 'Yantramanav', sans-serif;
-}
-
-header,h1,nav,main,article,aside,footer{
-	border:1px solid black;
+body {
 	padding: 0;
 	margin: 0;
 }
 
-header{
-display: flex;
+header,h1,nav,main,article,aside,footer{
+	padding:0;
+	margin:0;
+	border: 1px solid black;
+}
 
+header{
+	display:flex;
+	align-items: center;
+}
+
+h1{
+	flex-basis: 45%;
+	text-align: center;
 }
 
 nav{
+	flex-basis: 55%;
+}
+
+#main-menu{
+	list-style: none;
 	display:flex;
+	padding: 0;
+	margin: 0 30px;
+	justify-content: space-between;
+}
+
+#main-menu li{
+	padding: 10px;
+	margin: 0 10px;
 }
 
 main{
-	display:flex;
+	display: flex;
 }
+
 article{
-	flex-basis: 75%; 
+	flex-basis:75%;
 }
 
 aside{
-	flex-basis: 25%;
+	flex-basis:25%;
 }
 
 @media (max-width: 600px){
 	main{
 		flex-direction: column;
 	}
+	
 	article{
-		flex-basis:100%;
+		flex-basis: 100%;
 	}
+	
 	aside{
-		flex-basis:100%;
+		flex-basis: 100%;
 	}
+	
+}
+
+footer{
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
 }
